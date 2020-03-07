@@ -34,7 +34,6 @@ import org.primefaces.model.chart.OhlcChartSeries;
 import org.primefaces.model.chart.PieChartModel;
 
 @NamedEvent
-@RequestScoped
 public class ChartView implements Serializable {
  
     private LineChartModel lineModel1;

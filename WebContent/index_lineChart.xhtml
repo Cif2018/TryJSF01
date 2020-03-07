@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+
+	<h2>PrimeFaces Linear Chart Example</h2>
+
+	<h:panelGrid id="grid" columns="6" columnClasses="left,right" style="width:100%">
+	
+		<p:chart id="line1" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line2" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line3" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line4" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line5" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line6" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+			
+	</h:panelGrid>
+
+<!-- 	<p:poll interval="10" update="grid" /> -->
+
+	<p:poll interval="10" update="line1" />
+	<p:poll interval="10" update="line2" />
+	<p:poll interval="10" update="line3" />
+	<p:poll interval="10" update="line4" />
+	<p:poll interval="10" update="line5" />
+	<p:poll interval="10" update="line6" />
+
+
+</h:body>
+
+
+</html>
