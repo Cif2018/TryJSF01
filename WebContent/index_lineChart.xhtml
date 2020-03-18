@@ -5,10 +5,14 @@
 <h:head></h:head>
 <h:body>
 
-	<h2>PrimeFaces Linear Chart Example</h2>
+	<h2>KPI Dashboard</h2>
 
-	<h:panelGrid id="grid" columns="6" columnClasses="left,right" style="width:100%">
-	
+	<b> <h:outputText id="time_id" value="#{lineChartBean.time}" />
+	</b>
+
+	<h:panelGrid id="grid" columns="6" columnClasses="left,right"
+		style="width:100%">
+
 		<p:chart id="line1" type="line" model="#{lineChartBean.lineModel}"
 			style="height:auto;width:auto" />
 		<p:chart id="line2" type="line" model="#{lineChartBean.lineModel}"
@@ -21,17 +25,37 @@
 			style="height:auto;width:auto" />
 		<p:chart id="line6" type="line" model="#{lineChartBean.lineModel}"
 			style="height:auto;width:auto" />
-			
+		<p:chart id="line7" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line8" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line9" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line10" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line11" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+		<p:chart id="line12" type="line" model="#{lineChartBean.lineModel}"
+			style="height:auto;width:auto" />
+
 	</h:panelGrid>
 
-<!-- 	<p:poll interval="10" update="grid" /> -->
+	<!-- 	<p:poll interval="10" update="grid" /> -->
 
-	<p:poll interval="10" update="line1" />
-	<p:poll interval="10" update="line2" />
-	<p:poll interval="10" update="line3" />
-	<p:poll interval="10" update="line4" />
-	<p:poll interval="10" update="line5" />
-	<p:poll interval="10" update="line6" />
+	<p:poll interval="5" update="time_id" />
+
+	<p:poll interval="5" update="line1" />
+	<p:poll interval="5" update="line2" />
+	<p:poll interval="5" update="line3" />
+	<p:poll interval="5" update="line4" />
+	<p:poll interval="5" update="line5" />
+	<p:poll interval="5" update="line6" />
+	<p:poll interval="5" update="line7" />
+	<p:poll interval="5" update="line8" />
+	<p:poll interval="5" update="line9" />
+	<p:poll interval="5" update="line10" />
+	<p:poll interval="5" update="line11" />
+	<p:poll interval="5" update="line12" />
 
 
 </h:body>
